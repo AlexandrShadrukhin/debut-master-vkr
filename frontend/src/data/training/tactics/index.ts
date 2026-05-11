@@ -1,0 +1,1 @@
+export { basicTactics } from './basicTactics';

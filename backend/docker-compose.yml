@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: vk-chess-postgres
+    environment:
+      POSTGRES_DB: vk_chess
+      POSTGRES_USER: vk_chess
+      POSTGRES_PASSWORD: vk_chess
+    ports:
+      - "5432:5432"
+    volumes:
+      - vk_chess_pg_data:/var/lib/postgresql/data
+
+volumes:
+  vk_chess_pg_data:
